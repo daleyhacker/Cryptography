@@ -12,6 +12,16 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
 text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+
+while text != "q":
+    if text != "e" and text != "d":
+        print("Did not understand command, try again.")
+    elif text = "e":
+        message = input("Message: )
+        key = input("Key: ")
+    
+
+"""
 def repeat_this(text):
     print(text)
 
@@ -25,7 +35,7 @@ if text == "e":
 def repeat_this(tex):
     print(text)
 
-
+"""
 
 
 #scramble = associations.find(message)
