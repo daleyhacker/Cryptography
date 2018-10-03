@@ -16,10 +16,11 @@ text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 while text != "q":
     print("Did not understand command, try again.")
     text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+    
 if text != "e" and text != "d":
     print("Did not understand command, try again.")
 elif text == "e":
-    message = input("Message: )
+    message = input("Message: ")
     key = input("Key: ")
     
     
