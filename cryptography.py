@@ -16,31 +16,13 @@ text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 while text != "q" and text != "e" and text != "d":
     print("Did not understand command, try again.")
     text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
-    
-if text != "e" and text != "d":
-    print("Did not understand command, try again.")
-elif text == "e":
-    message = input("Message: ")
-    key = input("Key: ")
-    
-    
-
-"""
-def repeat_this(text):
-    print(text)
-
-if text != "e" and text != "q":
-    print("Did not understand command, try again.")
-
 
 if text == "e":
     message = input("Message: ")
     key = input("Key: ")
-def repeat_this(tex):
-    print(text)
-
-"""
-
-
-#scramble = associations.find(message)
-#print(scramble)
+    message = associations.find(message)
+    print(message)
+    #encrypted = message + key
+    #print(encrypted)
+elif text == "d":
+    message = input("Message: ")
