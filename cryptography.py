@@ -20,9 +20,16 @@ while text != "q" and text != "e" and text != "d":
 if text == "e":
     message = input("Message: ")
     key = input("Key: ")
-    message = associations.find(message)
-    print(message)
-    #encrypted = message + key
-    #print(encrypted)
+    for c in message:
+        for a in associations:
+            encrypt = zip(c, a)
+            print(encrypt)
+    #encrypt = associations.find(message)
+    #for i in str(encrypt):
+    #    print(i)
+    
 elif text == "d":
     message = input("Message: ")
+    text = input("Key: ")
+elif text == "q":
+    print("Goodbye!")
