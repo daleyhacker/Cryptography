@@ -25,9 +25,11 @@ if text == "e":
     z = zip(message1, key1)
     for x in z:
         print(x[0], x[1])
-    
+
+
 elif text == "d":
     message = input("Message: ")
     text = input("Key: ")
+
 elif text == "q":
     print("Goodbye!")
