@@ -20,10 +20,11 @@ while text != "q" and text != "e" and text != "d":
 if text == "e":
     message = input("Message: ")
     key = input("Key: ")
-    for c in message:
-        for a in associations:
-            encrypt = zip(c, a)
-            print(encrypt)
+    encrypt = zip(message, key)
+    #for c in message:
+    #    for a in key:
+    #        encrypt = zip(c, a)
+    #        print(encrypt)
     #encrypt = associations.find(message)
     #for i in str(encrypt):
     #    print(i)
