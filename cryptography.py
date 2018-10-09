@@ -21,6 +21,7 @@ if text == "e":
     message = input("Message: ")
     key = input("Key: ")
     encrypt = zip(message, key)
+    print(encrypt)
     #for c in message:
     #    for a in key:
     #        encrypt = zip(c, a)
