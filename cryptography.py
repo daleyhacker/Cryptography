@@ -22,10 +22,11 @@ if text == "e":
     key = input("Key: ")
     message1 = list(message)
     key1 = list(key)
+    #m = associations.find(message1)
+    #k = assocations.find(key1)
     z = zip(message1, key1)
     for x in z:
         print(x[0], x[1])
-
 
 elif text == "d":
     message = input("Message: ")
