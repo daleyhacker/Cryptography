@@ -20,13 +20,15 @@ while text != "q" and text != "e" and text != "d":
 if text == "e":
     message = input("Message: ")
     key = input("Key: ")
-    message1 = list(message)
-    key1 = list(key)
-    #m = associations.find(message1)
-    #k = assocations.find(key1)
-    z = zip(message1, key1)
-    for x in z:
-        print(x[0], x[1])
+    #m1 = list(message)
+    #k1 = list(key)
+    ma = associations.find(message)
+    ka = associations.find(key)
+    z = zip(ma, ka)
+    za = associations.find(z)
+    print(za)
+    
+    
 
 elif text == "d":
     message = input("Message: ")
@@ -34,3 +36,18 @@ elif text == "d":
 
 elif text == "q":
     print("Goodbye!")
+
+
+
+"""
+if text == "e":
+    message = input("Message: ")
+    key = input("Key: ")
+    m1 = list(message)
+    k1 = list(key)
+    m2 = associations.find(m1)
+    k2 = assocations.find(k1)
+    z = zip(m1, k1)
+    for x in z:
+        print(x[0], x[1])
+"""
