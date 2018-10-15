@@ -33,11 +33,14 @@ if text == "e":
 
 elif text == "d":
     message = input("Message: ")
-    text = input("Key: ")
+    key = input("Key: ")
     
     for m in message:
-        ma = assciations.find(m)
+        ma = associations.find(m)
         print(ma)
+        for k in key:
+            ka = associations.find(k)
+            print(ka)
 
 elif text == "q":
     print("Goodbye!")
