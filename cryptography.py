@@ -24,10 +24,26 @@ if text == "e":
     for m in message:
         ma = associations.find(m)
         for k in key:
-            ka - associations.find(k)
+            ka = associations.find(k)
             encrypt = ma+ka
             print(associations[encrypt], end="")
+ 
     
+    
+
+elif text == "d":
+    message = input("Message: ")
+    text = input("Key: ")
+    
+    for m in message:
+        ma = assciations.find(m)
+        print(ma)
+
+elif text == "q":
+    print("Goodbye!")
+
+
+   
     """
     for m in message:
         ma = associations.find(m)
@@ -40,23 +56,13 @@ if text == "e":
     for x in ma:
         print(x[0], x[1])
     
-    """"
+
     
     
     #print(associations[9])
-    
-    
 
-elif text == "d":
-    message = input("Message: ")
-    text = input("Key: ")
+-----------------------------------------------
 
-elif text == "q":
-    print("Goodbye!")
-
-
-
-"""
 if text == "e":
     message = input("Message: ")
     key = input("Key: ")
