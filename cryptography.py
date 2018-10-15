@@ -20,13 +20,20 @@ while text != "q" and text != "e" and text != "d":
 if text == "e":
     message = input("Message: ")
     key = input("Key: ")
-    #m1 = list(message)
-    #k1 = list(key)
-    ma = associations.find(message)
-    ka = associations.find(key)
-    z = zip(ma, ka)
-    za = associations.find(z)
-    print(za)
+    
+    for m in message:
+        ma = associations.find(m)
+        m1 = list(ma)
+        print(m1)
+        #print(ma)
+    
+    for k in key:
+        ka = associations.find(k)
+        print(ka)
+    
+    
+    
+    #print(associations[9])
     
     
 
