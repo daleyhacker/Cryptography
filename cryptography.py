@@ -25,7 +25,7 @@ if text == "e":
         ma = associations.find(m)
         for k in key:
             ka = associations.find(k)
-            encrypt = (ma)+(ka)
+            encrypt = ma+ka
             #print(encrypt)
             print(associations[encrypt], end="")
         
