@@ -23,13 +23,13 @@ if text == "e":
     
     for m in message:
         ma = associations.find(m)
-        m1 = list(ma)
-        print(m1)
-        #print(ma)
+        print(ma)
     
     for k in key:
         ka = associations.find(k)
         print(ka)
+    
+    
     
     
     
