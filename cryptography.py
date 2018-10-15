@@ -25,7 +25,8 @@ if text == "e":
         ma = associations.find(m)
         for k in key:
             ka = associations.find(k)
-            encrypt = ma+ka
+            encrypt = str(ma)+str(ka)
+            print(encrypt)
             print(associations[encrypt], end="")
  
     
@@ -37,10 +38,10 @@ elif text == "d":
     
     for m in message:
         ma = associations.find(m)
-        print(ma)
         for k in key:
             ka = associations.find(k)
-            print(ka)
+            decrypt = ma-ka
+            print(associations[decrypt], end="")
 
 elif text == "q":
     print("Goodbye!")
