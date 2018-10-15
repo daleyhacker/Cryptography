@@ -23,7 +23,7 @@ if text == "e":
     
     for m in message:
         ma = associations.find(m)
-        while message != " ":
+        while message == "":
             for k in key:
                 ka = associations.find(k)
                 encrypt = (ma)+(ka)
