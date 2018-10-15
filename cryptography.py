@@ -29,6 +29,8 @@ if text == "e":
         ka = associations.find(k)
         print(ka)
     
+    for x in ma:
+        print(x[0], x[1])
     
     
     
