@@ -19,18 +19,14 @@ while text != "q" and text != "e" and text != "d":
 if text == "e":
     message = input("Message: ")
     key = input("Key: ")
+   
     m = []
     k = []
+   
     for m in message:
         ma = associations.find(m)
-        mlist = list(m)
-        print(mlist)
     for k in key:
         ka = associations.find(k)
-        klist = list(k)
-        print(klist)
-        mk = m[].append(mlist, klist)
-        print(mk)
         encrypt = ma+ka
         #print(associations[encrypt], end="")
 
