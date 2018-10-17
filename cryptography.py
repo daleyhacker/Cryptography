@@ -6,6 +6,8 @@ Assignment:
 Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
+import string
+
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
 text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
@@ -17,26 +19,22 @@ while text != "q" and text != "e" and text != "d":
 if text == "e":
     message = input("Message: ")
     key = input("Key: ")
-    
+    m = []
+    k = []
     for m in message:
         ma = associations.find(m)
-        for k in key:
-            ka = associations.find(k)
-            encrypt = ma + ka
-            #print(encrypt)
-            print(associations[encrypt], end="")
-            
-    """
-        for k in key:
-            ka = associations.find(k)
-            encrypt = (ma)+(ka)
-            #print(encrypt)
-            print(associations[encrypt], end="")
-        """
- 
-    
-    
+        mlist = list(m)
+        print(mlist)
+    for k in key:
+        ka = associations.find(k)
+        klist = list(k)
+        print(klist)
+        mk = m[].append(mlist, klist)
+        print(mk)
+        encrypt = ma+ka
+        #print(associations[encrypt], end="")
 
+#----------------------------------------------------------------------------
 elif text == "d":
     message = input("Message: ")
     key = input("Key: ")
@@ -54,6 +52,15 @@ elif text == "q":
 
    
     """
+
+        for k in key:
+            ka = associations.find(k)
+            encrypt = (ma)+(ka)
+            #print(encrypt)
+            print(associations[encrypt], end="")
+
+    
+    
     for m in message:
         ma = associations.find(m)
         print(ma)
