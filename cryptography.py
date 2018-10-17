@@ -22,11 +22,11 @@ if text == "e":
         ma = associations.find(m)
         for k in key:
             ka = associations.find(k)
-            encrypt = ma+ka
+            encrypt = ma + ka
             #print(encrypt)
             print(associations[encrypt], end="")
-        
-        """
+            
+    """
         for k in key:
             ka = associations.find(k)
             encrypt = (ma)+(ka)
@@ -67,7 +67,7 @@ elif text == "q":
     
     
     
-    #print(associations[9])
+    print(associations[9])
 -----------------------------------------------
 if text == "e":
     message = input("Message: ")
