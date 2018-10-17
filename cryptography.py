@@ -26,23 +26,21 @@ if text == "e":
     
     for m in message:
         ma = associations.find(m)
-        print(ma)
         for k in key:
             ka = associations.find(k)
             if len(message) == len(key):
                 z = zip(m, k)
                 #print(z)
                 #encrypt = ma+ ka
-                #print(m[0], k[0]) What does this do?
                 #print(encrypt)
                 #print(associations[encrypt], end="")
             elif ma > ka:
                 encrypt = ma 
             elif ma < ka:
                 encrypt = ma +ka
-                print(associations[encrypt], end="")
-        
-                """
+                print(associations[encrypt], end="")       
+            
+"""            
         for k in key:
             ka = associations.find(k)
             encrypt = (ma)+(ka)
