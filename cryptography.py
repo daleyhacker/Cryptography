@@ -1,6 +1,6 @@
 """
 cryptography.py
-Author: <your name here>
+Author: Patrick Daley
 Credit: <list sources used, if any>
 
 Assignment:
@@ -8,8 +8,11 @@ Assignment:
 Write and submit a program that encrypts and decrypts user data.
 
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
+
+Message: Two plus two = Five
+Key: Lorem ipsum
 """
-associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
 text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
@@ -23,19 +26,29 @@ if text == "e":
     
     for m in message:
         ma = associations.find(m)
+        print(ma)
         for k in key:
             ka = associations.find(k)
-            encrypt = ma+ka
-            #print(encrypt)
-            print(associations[encrypt], end="")
+            if len(message) == len(key):
+                z = zip(m, k)
+                #print(z)
+                #encrypt = ma+ ka
+                #print(m[0], k[0]) What does this do?
+                #print(encrypt)
+                #print(associations[encrypt], end="")
+            elif ma > ka:
+                encrypt = ma 
+            elif ma < ka:
+                encrypt = ma +ka
+                print(associations[encrypt], end="")
         
-        """
+                """
         for k in key:
             ka = associations.find(k)
             encrypt = (ma)+(ka)
             #print(encrypt)
             print(associations[encrypt], end="")
-        """
+"""
  
     
     
@@ -48,8 +61,9 @@ elif text == "d":
         ma = associations.find(m)
         for k in key:
             ka = associations.find(k)
-            decrypt = ma-ka
-            print(associations[decrypt], end="")
+            if ma == ka:
+                decrypt = ma-ka
+                print(associations[decrypt], end="")
 
 elif text == "q":
     print("Goodbye!")
