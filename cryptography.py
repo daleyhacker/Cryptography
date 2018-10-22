@@ -1,6 +1,6 @@
 """
 cryptography.py
-Author: <your name here>
+Author: Patrick Daley
 Credit: <list sources used, if any>
 Assignment:
 Write and submit a program that encrypts and decrypts user data.
@@ -20,12 +20,18 @@ if text == "e":
     message = input("Message: ")
     key = input("Key: ")
    
-    for m in message:
-        ma = associations.find(m)
-    for k in key:
-        ka = associations.find(k)
-        encrypt = ma + ka
-        print(associations[encrypt], end="")
+    if len(message) == len(key):
+        for m in message:
+            ma = associations.find(m)
+            for k in key:
+                ka = associations.find(k)
+                encrypt = ma + ka
+                print(associations[encrypt], end="")
+        
+    elif len(message) < len(key):
+        print("hi")
+    elif len(message) > len(key):
+        print("hello")
 
 #----------------------------------------------------------------------------
 elif text == "d":
