@@ -6,7 +6,7 @@ Assignment:
 Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
-import string
+
 
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
@@ -44,7 +44,9 @@ if text == "e":
             x0a = associations.find(x0)
             x1a = associations.find(x1)
             while len(key) < len(message):
-                x1a = str(x1a) + str(x0)
+                for x in x1a:
+                    x1a = str(x1a) + str(x0)
+                #x1a = str(x1a) + str(x0)
             encrypt = x0a + x1a
             print(associations[encrypt], end="")
 
