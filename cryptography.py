@@ -45,7 +45,6 @@ if text == "e":
             x1a = associations.find(x1)
             encrypt = x0a + x1a
             print(associations[encrypt], end="")
-
 #----------------------------------------------------------------------------
 elif text == "d":
     message = input("Message: ")
