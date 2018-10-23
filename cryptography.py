@@ -43,8 +43,8 @@ if text == "e":
             x1 = x[1]
             x0a = associations.find(x0)
             x1a = associations.find(x1)
-            while len(key) != len(message):
-                
+            while len(key) < len(message):
+                x1a = str(x1a) + str(x0)
             encrypt = x0a + x1a
             print(associations[encrypt], end="")
 
