@@ -45,8 +45,14 @@ if text == "e":
             x1a = associations.find(x1)
             encrypt = x0a + x1a
             print(associations[encrypt], end="")
+            
+
+    text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+    while text != "q" and text != "e" and text != "d":
+        print("Did not understand command, try again.")
+        text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 #----------------------------------------------------------------------------
-elif text == "d":
+if text == "d":
     message = input("Message: ")
     key = input("Key: ")
     if len(message) == len(key):
@@ -76,5 +82,10 @@ elif text == "d":
                 encrypt = x0a - x1a
                 print(associations[encrypt], end="")
 
-elif text == "q":
-    print("Goodbye!")
+    text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+    while text != "q" and text != "e" and text != "d":
+        print("Did not understand command, try again.")
+        text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+
+    if text == "q":
+        print("Goodbye!")
