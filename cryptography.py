@@ -46,7 +46,7 @@ if text == "e":
             encrypt = x0a + x1a
             print(associations[encrypt], end="")
             
-
+    print()
     text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
     while text != "q" and text != "e" and text != "d":
         print("Did not understand command, try again.")
@@ -82,6 +82,7 @@ if text == "d":
                 encrypt = x0a - x1a
                 print(associations[encrypt], end="")
 
+    print()
     text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
     while text != "q" and text != "e" and text != "d":
         print("Did not understand command, try again.")
