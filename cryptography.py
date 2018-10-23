@@ -21,29 +21,49 @@ if text == "e":
     key = input("Key: ")
    
     if len(message) == len(key):
-        for m in message:
-            ma = associations.find(m)
-            for k in key:
-                ka = associations.find(k)
-                encrypt = ma + ka
-                print(associations[encrypt], end="")
-        
+        for x in zip(message, key):
+            x0 = x[0]
+            x1 = x[1]
+            x0a = associations.find(x0)
+            x1a = associations.find(x1)
+            encrypt = x0a + x1a
+            print(associations[encrypt], end="")
+            
     elif len(message) < len(key):
-        print("hi")
+        for x in zip(message, key):
+            x0 = x[0]
+            x1 = x[1]
+            x0a = associations.find(x0)
+            x1a = associations.find(x1)
+            encrypt = x0a +x1a
+            print(associations[encrypt], end="")
     elif len(message) > len(key):
-        print("hello")
+        
 
 #----------------------------------------------------------------------------
 elif text == "d":
     message = input("Message: ")
     key = input("Key: ")
+    if len(message) == len(key):
+        for x in zip(message, key):
+                x0 = x[0]
+                x1 = x[1]
+                x0a = associations.find(x0)
+                x1a = associations.find(x1)
+                encrypt = x0a - x1a
+                print(associations[encrypt], end="")
     
-    for m in message:
-        ma = associations.find(m)
-        for k in key:
-            ka = associations.find(k)
-            decrypt = ma-ka
-            print(associations[decrypt], end="")
+    if len(message) > len(key):
+        
+                
+    elif len(message) < len(key):
+        for x in zip(message, key):
+                x0 = x[0]
+                x1 = x[1]
+                x0a = associations.find(x0)
+                x1a = associations.find(x1)
+                encrypt = x0a - x1a
+                print(associations[encrypt], end="")
 
 elif text == "q":
     print("Goodbye!")
