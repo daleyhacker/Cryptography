@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Patrick Daley
-Credit: <list sources used, if any>
+Credit: Classmates and https://developers.google.com/edu/python/strings
 Assignment:
 Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
