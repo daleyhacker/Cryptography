@@ -38,7 +38,15 @@ if text == "e":
             encrypt = x0a +x1a
             print(associations[encrypt], end="")
     elif len(message) > len(key):
-        
+        for x in zip(message, key):
+            x0 = x[0]
+            x1 = x[1]
+            x0a = associations.find(x0)
+            x1a = associations.find(x1)
+            while len(key) != len(message):
+                
+            encrypt = x0a + x1a
+            print(associations[encrypt], end="")
 
 #----------------------------------------------------------------------------
 elif text == "d":
@@ -54,7 +62,7 @@ elif text == "d":
                 print(associations[encrypt], end="")
     
     if len(message) > len(key):
-        
+        print(hi)
                 
     elif len(message) < len(key):
         for x in zip(message, key):
