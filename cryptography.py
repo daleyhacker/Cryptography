@@ -45,38 +45,40 @@ while text == "e":
                 x1a = associations.find(x1)
                 encrypt = x0a + x1a
                 print(associations[encrypt], end="")
+        print()
     text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
-while text == "d":
-    if text == "d":
-        message = input("Message: ")
-        key = input("Key: ")
-        if len(message) == len(key):
-            for x in zip(message, key):
+    while text == "d":
+        if text == "d":
+            message = input("Message: ")
+            key = input("Key: ")
+            if len(message) == len(key):
+                for x in zip(message, key):
+                        x0 = x[0]
+                        x1 = x[1]
+                        x0a = associations.find(x0)
+                        x1a = associations.find(x1)
+                        encrypt = x0a - x1a
+                        print(associations[encrypt], end="")
+            
+            if len(message) > len(key):
+                for x in zip(message, str(key*1000)):
                     x0 = x[0]
                     x1 = x[1]
                     x0a = associations.find(x0)
                     x1a = associations.find(x1)
                     encrypt = x0a - x1a
                     print(associations[encrypt], end="")
-        
-        if len(message) > len(key):
-            for x in zip(message, str(key*1000)):
-                x0 = x[0]
-                x1 = x[1]
-                x0a = associations.find(x0)
-                x1a = associations.find(x1)
-                encrypt = x0a - x1a
-                print(associations[encrypt], end="")
-                    
-        elif len(message) < len(key):
-            for x in zip(message, key):
-                    x0 = x[0]
-                    x1 = x[1]
-                    x0a = associations.find(x0)
-                    x1a = associations.find(x1)
-                    encrypt = x0a - x1a
-                    print(associations[encrypt], end="")
-    text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+                        
+            elif len(message) < len(key):
+                for x in zip(message, key):
+                        x0 = x[0]
+                        x1 = x[1]
+                        x0a = associations.find(x0)
+                        x1a = associations.find(x1)
+                        encrypt = x0a - x1a
+                        print(associations[encrypt], end="")
+            print()
+        text = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
 
 if text == "q":
